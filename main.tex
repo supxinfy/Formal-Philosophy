@@ -40,7 +40,7 @@
 \newtheorem{thm}{Теорема}[section]
 \newtheorem{lem}[thm]{Лемма}
 \newtheorem{prop}[thm]{Предложение}
-\newtheorem{cor}{Следствие}
+\newtheorem{cor}{Следствие}	
 \newtheorem{note}{Замечание}[section]
 
 \theoremstyle{definition}
@@ -87,7 +87,7 @@
 
 Для Фитча эти свойства довольно просты, например, «знать \(x\) и \(y\)» \(=\) «знать \(x\) и знать \(y\)». Также, если верно «знать \(x\)», то \(x\) истинно. И самое важное, если «\(x\) истинно», то «возможно знать \(x\)».
 
-Если принять такие свойства, то понятие «знать» будет проблематично интерпретировать, что и называется парадоксом Фитча, но мы к этому придем позже, сейчас же обсудим интуитивность этих свойств. С первым свойством довольно трудно спорить, в самом деле, знание можно выносить из под конъюнкции (сможете ли Вы привести пример когда нельзя?). Второе свойство опирается на классическое представление о знании, в самом деле, «знать» более сильное утверждение, чем «верить» (подробности можно посмотреть \href{https://plato.stanford.edu/entries/knowledge-analysis/}{здесь}). Третье свойство самое интересное, если что-то истинно, то это «возможно знать», что можно было бы назвать «гносеологическим оптимизмом». Понятие «возможно» мы пока не раскрываем; для этого нам нужно продвинутся дальше, что будет сделано далее в курсе, когда мы подойдем к основам модальной логики, также можно посмотреть [здесь](https://plato.stanford.edu/entries/logic-modal/).
+Если принять такие свойства, то понятие «знать» будет проблематично интерпретировать, что и называется парадоксом Фитча, но мы к этому придем позже, сейчас же обсудим интуитивность этих свойств. С первым свойством довольно трудно спорить, в самом деле, знание можно выносить из под конъюнкции (сможете ли Вы привести пример когда нельзя?). Второе свойство опирается на классическое представление о знании, в самом деле, «знать» более сильное утверждение, чем «верить» (подробности можно посмотреть \href{https://plato.stanford.edu/entries/knowledge-analysis/}{здесь}). Третье свойство самое интересное, если что-то истинно, то это «возможно знать», что можно было бы назвать «гносеологическим оптимизмом». Понятие «возможно» мы пока не раскрываем; для этого нам нужно продвинутся дальше, что будет сделано далее в курсе, когда мы подойдем к основам модальной логики, также можно посмотреть \href{https://plato.stanford.edu/entries/logic-modal}{здесь}.
 
 Важно заметить, что мы здесь не оговариваем конкретное значение «знать» и не проводим никакого семантического анализа. Для нас прежде всего важны свойства, а не понятия. Этот подход несколько напоминает математический тип рассуждения. Редкий математик будет спрашивать «что такое число?», поскольку результативным вопросом будет «какое число?», i.e. каковы его свойства.
 
@@ -228,7 +228,7 @@ $$\neg(\neg \Diamond \psi \to \neg \Diamond \varphi) \to \neg \square (\varphi \
  \end{itemize}
 
 Ещё нам нужны дополнительные допущения, которые «likely to have been taken for granted both by Diodorus and by his main opponent» (Prior A. Diodoran Modalities. p. 210):
-- (Принцип Оккама относительно будущего) Если \(\varphi\) и всегда будет \(\varphi\), то был момент в прошлом, когда стало \(varphi\):
+- (Принцип Оккама относительно будущего) Если \(\varphi\) и всегда будет \(\varphi\), то был момент в прошлом, когда стало \(\varphi\):
     - \(A4. \quad (\varphi \land G \varphi) \to PG\varphi\) 
 - \(A5. \quad \square(\varphi \to HF \varphi)\)
 
@@ -243,12 +243,7 @@ $$\neg(\neg \Diamond \psi \to \neg \Diamond \varphi) \to \neg \square (\varphi \
 \item \(\neg \Diamond HF p_0\) — 6
 \end{enumerate}
 
-\subsection{ Литература }
-
-
-
-
-Сегодня мы обсудим два аргумента: Необходимость тождества С. Крипке и Невозможность нечётких объектов Г. Эванса. Они являются, прежде всего, аргументами формальной метафизики.
+Более подробное изложение темпоральной логики можно прочитать в \cite{Goranko}.
 
 \chapter{ Модальная метафизика }
 
@@ -275,10 +270,6 @@ $$\neg(\neg \Diamond \psi \to \neg \Diamond \varphi) \to \neg \square (\varphi \
 \item \(\square T\)
 \item \(\square (\varphi \land \psi) \equiv (\square \varphi \land \square \psi)\)
 \end{itemize}
-
-
-
-Начнём с аргумента Крипке
 
 \section{Необходимость тождества С. Крипке}
 
@@ -353,7 +344,7 @@ $$\neg(\neg \Diamond \psi \to \neg \Diamond \varphi) \to \neg \square (\varphi \
 \end{itemize}
 
 
-\section{Невозможность нечётких объектов}
+\section{Невозможность нечётких объектов Г. Эванса.}
 
 Об этом аргументе говорить чуть сложнее, поскольку сначала нужно определить понятие «нечёткого объекта».
 
@@ -387,19 +378,21 @@ $$\neg(\neg \Diamond \psi \to \neg \Diamond \varphi) \to \neg \square (\varphi \
 
 Подробнее в \cite{Evans}.
 
-
-
+\chapter{Эпистемическая логика}
 
 Настала пора формализовать всё то, что мы обсуждали в первой части конспектов. Мы начали с анализа классических синтаксических аргументов, но не вводили какую-то семантику строгим образом. Мы брали некоторые содержательные аксиомы и записывали их формально, предполагая, что эта запись является носителем той же мысли, что и словесная форма. Таким образом у нас получалось исчисление, описывающее правила манипуляции символами. Теперь будет более строгий инструмент вместе с семантикой.
 
 Будем вводить этот аппарат в эпистемической логике (от грек. \textgreek{ἐπιστήμη} --- знание), начиная со следующих обозначений.
+\begin{itemize}
+\item «\(K_i \varphi\)» — «агент \(i\) знает, что \(\varphi\)»
+\item «\(\hat{K}_i \varphi\)» — «агент \(i\) допускает, что \(\varphi\)»
+\item \(\hat{K}_i \varphi := \neg K_i \neg \varphi\) (буквально «я не знаю обратного»)
+\end{itemize}
 
-- «\(K_i \varphi\)» — «агент \(i\) знает, что \(\varphi\)»
-- «\(\hat{K}_i \varphi\)» — «агент \(i\) допускает, что \(\varphi\)»
-- \(\hat{K}_i \varphi := \neg K_i \neg \varphi\) (буквально «я не знаю обратного»)
-
+\begin{figure}
+\caption{Эпистемический шестиугольник}
 \begin{tikzpicture}
-  % Define the vertices of the hexagon
+
   \node[black] (A) at (90:3) {$K_i \varphi \lor K_i \neg \varphi$};
   \node[black] (E) at (30:3) {$K_i \neg \varphi$};
   \node[black] (I) at (330:3) {$\hat{K}_i \neg \varphi$};
@@ -407,7 +400,6 @@ $$\neg(\neg \Diamond \psi \to \neg \Diamond \varphi) \to \neg \square (\varphi \
   \node[black] (Y) at (210:3) {$\hat{K}_i \varphi$};
   \node[black] (U) at (150:3) {$K_i \varphi$};
 
-  % Draw the hexagon edges
   \draw[->, black] (E) -- (A);
   \draw[->, black] (E) -- (I);
   \draw[->, black] (O) -- (I);
@@ -416,7 +408,6 @@ $$\neg(\neg \Diamond \psi \to \neg \Diamond \varphi) \to \neg \square (\varphi \
   \draw[->, black] (U) -- (A);
   \draw[->, black] (O) -- (Y);
 
-  % Draw the diagonals
   \draw[green] (A) -- (I);
   \draw[green] (A) -- (Y);
   \draw[red] (A) -- (O);
@@ -427,46 +418,41 @@ $$\neg(\neg \Diamond \psi \to \neg \Diamond \varphi) \to \neg \square (\varphi \
   \draw[green] (I) -- (Y);
   \draw[blue] (O) -- (U);
 \end{tikzpicture}
+\centering
+\end{figure}
 
-У вершин будет хорошая интерпретация, например \(K^{?}_i \varphi := K_i \varphi \lor K_i \neg \varphi\) — агент информирован о \(\varphi\). \(\neg K^{?}_i \varphi = \hat{K}_i \varphi \land \hat{K}_i \neg \varphi\) — агент не информирован
 
-стрелки:
+У вершин будет хорошая интерпретация, например \(K^{?}_i \varphi := K_i \varphi \lor K_i \neg \varphi\) — агент информирован о \(\varphi\). \(\neg K^{?}_i \varphi = \hat{K}_i \varphi \land \hat{K}_i \neg \varphi\) — агент не информирован.
 
-черные — следствия (\(a \to a \lor b\) или \(a \land b \to a\))
+Теперь поговорим о значении стрелок:
+\begin{itemize}
+\itemчерные — следствия (\(a \to a \lor b\) или \(a \land b \to a\))
 
-зелёные — субконтрарность (не совместимы по ложности, но по истинности)
+\itemзелёные — субконтрарность (не совместимы по ложности, но по истинности)
 
-синие — контрарность (не совместимы по истине, i.e. не могут быть одновременно истинными, но могут быть одновременно ложными)
+\itemсиние — контрарность (не совместимы по истине, i.e. не могут быть одновременно истинными, но могут быть одновременно ложными)
 
-красные — контрадикторные (не совместимые)
+\itemкрасные — контрадикторные (не совместимые)
+\end{itemize}
 
 \subsection{ Правильные формулы }
 
-Мы будем использовать форму BNF.
+Мы будем использовать форму BNF. Правильно построенная формула языка эпистемической логики определяется следующей грамматикой:
 
-- Правильно построенная формула языка эпистемической логики определяется следующей грамматикой:
-
-$$ \varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi) | K_i\varphi | \hat{K}_i \varphi$$
-
-Наша логика мультиагентная (несколько людей).
-
-Теперь поговорим о семантике
+\[\varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi) | K_i\varphi | \hat{K}_i \varphi.\]
 
 \subsection{ Модель Крипке }
 
-- \(\mathcal{M} = (W, (\sim\_i)\_{i\in \mathcal{A}}, V)\) — модель Крипке, где
-- \(\mathcal{A}\) — непустое конечное множество агентов 
-- \(W\) — непустое множество возможных миров
-- \(\sim_i\) — отношение эквивалентности на \(W\) для агента \(i\)
-- \(V : Var \mapsto \mathcal{P}(W)\) — функция оценки, i.e. \(V(p) \subseteq W\)
-    - мы указываем миры, где переменная истинна
+Моделью Крипке называется \(\mathcal{M} = (W, (\sim_i)_{i\in \mathcal{A}}, V)\), где
+\(\mathcal{A}\) — непустое конечное множество агентов, \(W\) — непустое множество возможных миров, \(\sim_i\) — отношение эквивалентности на \(W\) для агента \(i\), \(V : Var \mapsto \mathcal{P}(W)\) — функция оценки, i.e. \(V(p) \subseteq W\) (мы указываем миры, где переменная истинна).
 
-Теперь семантика
-
-- \(\mathcal{M}, x \models p \Leftrightarrow x \in V(p)\) 
-- \(\mathcal{M}, x \models \neg \varphi \Leftrightarrow \mathcal{M}, x \not\models \varphi\) 
-- \(\mathcal{M}, x \models \varphi \land \psi \Leftrightarrow \mathcal{M}, x \models \varphi \land \mathcal{M}, x \models \psi\)
-- \(\mathcal{M}, x \models K_i \varphi \Leftrightarrow \forall y(x_i \sim_i y \implies \mathcal{M}, y \models \varphi)\)
+Тогда у нашей модели будет следующая семантика
+\begin{enumerate}
+\item\(\mathcal{M}, x \models p \Leftrightarrow x \in V(p)\) 
+\item\(\mathcal{M}, x \models \neg \varphi \Leftrightarrow \mathcal{M}, x \not\models \varphi\) 
+\item\(\mathcal{M}, x \models \varphi \land \psi \Leftrightarrow \mathcal{M}, x \models \varphi \land \mathcal{M}, x \models \psi\)
+\item\(\mathcal{M}, x \models K_i \varphi \Leftrightarrow \forall y(x_i \sim_i y \implies \mathcal{M}, y \models \varphi)\)
+\end{enumerate}
 
 Мы говорим про семейство эпистемических логик. можно немного изменить начальные положения.
 вопрос какие свойства знания нам нужны остаётся открытым. мы можем изменить отношение достижимости. мы полагаем, что в нашей модели есть отношение эквивалентности: рефлексивность + симметричность + транзитивность = рефлексивность + евклидовость.
@@ -475,10 +461,12 @@ $$ \varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi
 
 Соответствие между свойствами отношения достижимости (классом шкал, шкала — это модель крипке без оценки) и эпистемическими формулами:
 
-- Фактичность: \(K_i \varphi \to \varphi\) — общезначима там, где есть рефлексивность
-- ? — \(\varphi \to K_i \hat{K}_i \varphi\) — симметричность
-- Позитивная интроспекция: \(K_i \varphi \to K_i K_i \varphi\) — общезначима там, где есть транзитивность
-- Негативная интроспекция: \(\neg K_i \varphi \to K_i \neg K_i \varphi\) — евклидовость
+\begin{itemize}
+\item Фактичность: \(K_i \varphi \to \varphi\) — общезначима там, где есть рефлексивность
+\item (Нет названия) — \(\varphi \to K_i \hat{K}_i \varphi\) — симметричность
+\item Позитивная интроспекция: \(K_i \varphi \to K_i K_i \varphi\) — общезначима там, где есть транзитивность
+\item Негативная интроспекция: \(\neg K_i \varphi \to K_i \neg K_i \varphi\) — евклидовость
+\end{itemize}
 
 Мы можем изучать логику систематически анализируя свойства отношение достижимости. Например, транзитивность порождает парадокс кучи и проблему веса монетки. Пусть у меня есть монетка и я не знаю сколько она весит. Очевидно, что я не могу (без точных весов) различить миры, где эта монетка весит 6 грамм или 7 грамм. На самом деле я не могу различить мир, где монетка весит \(n\) грамм, от мира где монетка весит \(n+1\) грамм и если верна транзитивность, то мы приходим к абсурдному заключению: я не могу различить монетку весом в 6 грамм от монетки весом в 6 килограмм. По этому примеру можно убедиться, что транзитивность подходит не для всех логических моделей.
 
@@ -490,6 +478,8 @@ $$ \varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi
 
 Давайте рассмотрим простой пример.
 
+\begin{figure}
+\centering
 \begin{tikzpicture}[node distance=3cm, every loop/.style={min distance=5mm, in=60, out=120, looseness=10}]
 
     % Nodes
@@ -506,6 +496,7 @@ $$ \varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi
     \node[black, below left=0.1cm of q] {$w_2$};
 
 \end{tikzpicture}
+\end{figure}
 
 У нас есть два мира, со следующими оценками: \(V(p) = {w_1}\), \(V(q) = W\). Давайте посмотрим что истино в этой модели. Получается \[M, w_1 \models K_a q \land \neg K_a p,\]
 
@@ -515,6 +506,8 @@ $$ \varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi
 
 Важно, что конкретный агент не знает «истинного положения вещей», но знает факт, позволяющий ему рассматривать меньшее семейство возможных миров (=возможностей).
 
+\begin{figure}
+\centering
 \begin{tikzpicture}[node distance=3cm]
 
     \node[black,circle, draw, minimum size=1cm] (1) {$7_a, \ T_b, \ 3_c$};
@@ -539,6 +532,7 @@ $$ \varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi
         (2) edge[green, <->, bend left=20, line width=0.2mm] node[above right] {$b$} (3);
 
 \end{tikzpicture}
+\end{figure}
 
 Отметим, что петли пропущены для удобства. Мы всегда предполагаем, что агент не различает мир, в котором он находится.
 
@@ -546,6 +540,8 @@ $$ \varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi
 
 % \begin{document}
 
+\begin{figure}
+\centering
 \begin{tikzpicture}[node distance=3cm, every loop/.style={min distance=5mm, in=60, out=120, looseness=10}]
 
     % Nodes
@@ -565,9 +561,12 @@ $$ \varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi
     \node[black, below left=0.1cm of q] {$w_2$};
 
 \end{tikzpicture}
+\end{figure}
 
 Теперь рассмотрим двух агентов: Бенедикта и Беатриче. Бенедикт любит Беатриче, но она не знает об этом, а Беатриче любит Бенедикта, но он не знает об этом. Формулы, верные в нашей модели \(\mathcal{M}, w_1 \models K_a p \land \neg K_b p \land \neg K_a q \land K_b q \).
 
+\begin{figure}
+\centering
 \begin{tikzpicture}[node distance=3cm, every loop/.style={min distance=5mm, in=60, out=120, looseness=10}]
 
     % Nodes
@@ -591,6 +590,7 @@ $$ \varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi
     \node[black, below left=0.1cm of qq] {$w_4$};
 
 \end{tikzpicture}
+\end{figure}
 
 \subsection{ Формы коллективного знания }
 
@@ -649,6 +649,8 @@ $$ \varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi
 
 Рассмотрим пример раскрытия конверта.
 
+\begin{figure}
+\centering
 \begin{tikzpicture}[node distance=3cm, every loop/.style={min distance=5mm, in=60, out=120, looseness=10}]
 
     % Nodes
@@ -663,6 +665,8 @@ $$ \varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi
     \node[black, below left=0.1cm of q] {$w_2$};
 
 \end{tikzpicture}
+\end{figure}
+
 Лежит неоткрытый конверт. Пусть агенты вместе открыли конверт и прочитали, что \(p\) истинно. Следующие формулы будут истины в этом примере. 
 \begin{itemize}
 \item \(\mathcal{M}, w_1 \models p\)
@@ -741,13 +745,17 @@ $$ \varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi
 \item \([!] \varphi \to \varphi\)
 \item \([!] \varphi \to [!][!] \varphi\)
 \item \([!]p \leftrightarrow p\)
-\item \(\langle ! \rangle [!] \varphi \to [!] \langle ! \rangle \varphi\)
-\item \([!] \langle ! \rangle \varphi \to \langle ! \rangle [!] \varphi\)
+\item \(\langle ! \rangle [!] \varphi \to [!] \langle ! \rangle \varphi\) (Черча-Росса)
+\item \([!] \langle ! \rangle \varphi \to \langle ! \rangle [!] \varphi\) (МакКинзи)
 \item \(K_i [!] \varphi \to [!] K_i \varphi\)
 \item \([!] \varphi \to [! \psi] \varphi\), где \(\psi\) не содержит \([!]\)
 \end{enumerate}
 
 Теперь мы можем воссоздать парадокс Фитча снова. Мы описывали познаваемость как \(p \to \Diamond K p\). Теперь мы можем воспользоваться динамическим оператором: \(p \to \langle ! \rangle K_i p\). Иными сломами, если \(p\) истинно, то найдется объявление, после которого агент будет знать \(p\). Заметим, что это будет работать только с атомарными формулами \(p\), поскольку в ином случае мы можем поставить формулу Мура, о который мы говорили ранее. Тогда \((p \land \neg K_i p) \to \langle ! \rangle K_i (p \land \neg K_i p)\). Наше обобщение не проходит.
+
+\begin{xrc}
+Докажите, что \((p \land \neg K_i p) \to \langle ! \rangle K_i (p \land \neg K_i p)\) является противоречивой формулой. Подсказка. Посмотрите как ведет себя формула \((p \land \neg K_i p) \to \neg \langle ! \rangle K_i (p \land \neg K_i p)\).
+\end{xrc}
 
 В APAL существуют два вида познаваемости: th-познаваемость \(\models \varphi \to \langle ! \rangle K_i \varphi\) и wh-познаваемость \(\models \langle ! \rangle K_i \varphi \lor \langle ! \rangle K_i \neg \varphi\) (wh-познаваемость --- это ``что познаваемость''). Wh-познаваемость не верна для любой формулы, но и не является парадоксальной в смысле Мура (проверьте!). Словами wh-познаваемость означает, что существует такое объявление, после которого агент \(i\) знает что \(p\) или не \(p\).
 
@@ -762,6 +770,12 @@ $$ \varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi
 Тогда все позитивные формулы --- сохранны, все сохранные формулы --- успешные, все успешные формулы --- познаваемы, не все успешные формулы позитивны (например, \(\neg K_i p\)). Также, не все познаваемые формулы успешны (например, \(K_a (p \land K_b \neg p)\)).
 
 Теперь у нас появился инструментарий, который позволяет выразить разные типы познаваемости и прагматическую оценку познаваемости (сохраняется ли познаваемость при объявлении и успешный ли он.)
+
+\begin{xrc}
+Воспользуйтесь аксиомами редукции, чтобы показать, что \(p \to \langle ! \rangle K_i p\) является законом для атомарной формулы \(p\).
+\end{xrc}
+
+
 
 \chapter{Формальная этика}
 
@@ -786,7 +800,9 @@ $$ \varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi
 
 Аксиома нормальности (K) \(O(\varphi \to \psi) \to (O \varphi \to O \psi) \) (с ней связаны проблемы логического всевиденья)
 
-Деонтический шестиугольник
+
+\begin{figure}
+\centering
 \begin{tikzpicture}
   % Define the vertices of the hexagon
   \node[black] (A) at (90:3) {$O \varphi \lor O \neg \varphi$};
@@ -816,6 +832,8 @@ $$ \varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi
   \draw[green] (I) -- (Y);
   \draw[blue] (O) -- (U);
 \end{tikzpicture}
+\caption{Деонтический шестиугольник}
+\end{figure}
 
 Затруднения общего характера 
 \begin{itemize}
@@ -991,29 +1009,64 @@ $$ \varphi, \psi ::= p | \neg \varphi | (\varphi \land \psi) | (\varphi \to \psi
 
 \chapter{Онтологический аргумент}
 
+\section{Онтологический аргумент Курта Геделя}
+
+Мы попали на территорию аналитической теологии и модальной метафизики. Основные вопросы в этой сфере: формализация онтологического аргумента, логические модели всеведения, логические модели всемогущества.
 Мы сосредоточимся на логических аспектах доказательства.
 
-\section{Аксиомы о определения}
+Первый онтологический аргумент был сформулирован Ансельмом Кентерберийским (1033--1109), затем разрабатывался Рене Декартом (1596--1650) и Готфридом Лейбницем (1646--1716). После критики Иммануила Канта (1724--1804) считалось, что аргумент не обладает былой убедительной силой. Но Курт Гедель (1906--1978) возродил его, создав чисто логическое доказательство. С тех пор онтологический аргумент стал одним из самый важных и актуальных аргументов аналитической теологии и получил различные версии, например: А. Плантинга, ван Инваген и пр.
+
+У Геделя очень сложная конструкция доказательства, использующая и модальную логику, и логику предикатов высшего порядка. Поэтому до сих пор нет доказательства, что аргумент Геделя не противоречив. Поскольку аргумент модальный, очень важно специфицировать в какой модальной логике мы работаем. Повар vs. Хороший повар.
+
+Гедель использует позитивность (соответсвенно оператор \(\mathrm{Pos}\)), как основу всего аргумента. Эту позитивность можно понимать как что-то ``хорошее'', либо как ``присутствие''. Теперь приступим к рассмотрению определений и аксиом, которые мы будем использовать. 
 
 \subsection{Определения}
 \begin{enumerate}
-\item \(G(x) := \forall X (\mathrm{Pos}(X) \rightarrow X(x))\)
-\item \(X \sqsubseteq Y := \forall x (X(x) \rightarrow Y(x))\)
-\item \(\mathrm{ess}(X, x) := X(x) \land \forall Y (Y(x) \rightarrow \square (X \sqsubseteq Y))\)
-\item \(E(x) := \forall X (\mathrm{ess}(X, x) \rightarrow \square \exists x X(x))\)
+\item \(G(x) := \forall X (\mathrm{Pos}(X) \rightarrow X(x))\) (Быть Богом --- обладать всеми позитивными свойствами)
+\item \(X \sqsubseteq Y := \forall x (X(x) \rightarrow Y(x))\) (Свойство \(X\) влечет свойство \(Y\))
+\item \(\mathrm{ess}(X, x) := X(x) \land \forall Y (Y(x) \rightarrow \square (X \sqsubseteq Y))\) (\(X\) является существенным свойством объекта \(x\))
+\item \(E(x) := \forall X (\mathrm{ess}(X, x) \rightarrow \square \exists x X(x))\) (Объект \(x\) необходимо существует, i.e. все существенные свойства \(x\) с необходимостью экземплифицируются)
 \end{enumerate}
+
+Обратите внимание на конъюнкцию в определении \(mathrm{ess}\). Это и есть знаменитая поправка Скотта. Если бы ее не было, то мы могли бы подставить пустое свойство, которое стало бы существенным  свойством объекта.
 
 \subsection{Аксиомы}
 
 \(\mathrm{Pos}(X) =\) свойство \(X\) является позитивным,
 «Positive means positive in the moral aesthetic sense (independently of the accidental structure of the world). Only then are] the axioms true. It may also mean pure "attribution' as opposed to 'privation' (or containing privation)». Цит. по. (Fitting 2002, р. 146 (Аксиологически)
 
+\begin{enumerate}
+\item \(\mathrm{Pos}(G)\)
 
-(Онтологически)
+\item \(\mathrm{Pos}(E)\)
 
-\(\mathrm{Pos}(G)\)
+\item \(\neg \mathrm{Pos}(S) \equiv \mathrm{Pos}(\neg S)\)
+\item \(\mathrm{Pos}(S) \to \square \mathrm{Pos}(S)\)
+\item \([\mathrm{Pos}(S) \land \square (S \sqsubseteq Q)] \to \mathrm{Pos}(Q)\)
+\end{enumerate}
 
-\(\mathrm{Pos}(E)\)
+Далее выпишем всю цепочку утверждений, которые возможно доказать из этих аксиом, которые и станут доказательством существования Бога. 
+\begin{itemize}
+\item \(\mathrm{Pos}(S) \to \Diamond \exists x S(x)\) (Если свойство позитивно, то, возможно, существует объект, обладающий этим свойством)
+\item \(\Diamond \exists x G(x)\) (Следовательно, Бог, возможно, существует. Что интересно, в ранних версиях онтологического аргумента это была аксиома)
+\item \(G(x) \to \forall S (\mathrm{Pos}(S) \equiv G(x))\)
+\item \(G(x) \to \mathrm{ess}(G, x)\)
+\item \(G(x) \to \square \exists y G(y)\) 
+\item \(\square \exists x G(x)\)
+\end{itemize}
+
+\begin{xrc}
+Фильтром над \(A\) называют такое семейство подмножеств \(F \subset \mathcal{P}(A)\), что
+\begin{enumerate}
+\item \(\varnothing \not\in F\),
+\item \(X \in F, X \subseteq Y \implies Y \in F\),
+\item \(X, Y \in F \implies X \cap Y \in F\).
+\end{enumerate}
+Если для любого \(X \in \mathcal{P}(A)\) верно одно из двух, либо \(X \in F\), либо \(X^c \in F\).
+Докажите, что свойство позитивности образует ультрафильтр над множеством позитивных свойств.
+\end{xrc}
+
+Ультрафильтры можно еще заметить в знаменитой теореме К. Эрроу о диктаторе, подробнее в \cite{Odifreddi}.
 
 \subsection{Доказательство}
 
@@ -1104,6 +1157,17 @@ van Benthem, J.
 Balbiani, P., Baltag, A., Ditmarsch, H. Van, Herzig, A., Hoshi, T., and de Lima, T.
 \newblock {\em `Knowable' as `Known After an Announcement'.} 
 \newblock The Review of Symbolic Logic, 1(3), 305--334.
+
+\bibitem{Goranko}
+Goranko V.
+\newblock {\em Temporal Logics.} 
+\newblock Cambridge University Press; 2023.
+
+\bibitem{Odifreddi}
+Odifreddi P.
+\newblock {\em Ultrafilters, Dictators, and God.} 
+\newblock Finite Versus Infinite. Discrete Mathematics and Theoretical Computer Science. Springer, London, 2000.
+\newblock {url: \url{https://doi.org/10.1007/978-1-4471-0751-4_16}}
 
 \end{thebibliography}
 \end{document}
