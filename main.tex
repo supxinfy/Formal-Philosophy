@@ -58,6 +58,9 @@
 
 \begin{document}
 
+\maketitle
+\tableofcontents
+
 \chapter{Введение}
 
 Данный текст представляет собой конспект вводного курса ``Формальная философия'' прочитанный В.В. Долгоруковым в ВШЭ. \href{https://drive.google.com/drive/folders/14R_Xut-3dRLUAvHlE7vkMyW9hsI8oiwV}{Лекции}, к сожалению, уже не доступны. Сам конспект иногда вольно излагает содержание курса.
@@ -1092,7 +1095,7 @@ $$\neg(\neg \Diamond \psi \to \neg \Diamond \varphi) \to \neg \square (\varphi \
 \AxiomC{\(\)}
 \RightLabel{A4}
 \UnaryInfC{\(\mathrm{Pos}(G)\)}
-\AxiomC{\(\forall X (\mathrm{Pox}(X) \to \Diamond \exists x X(x))\)}
+\AxiomC{\(\forall X (\mathrm{Pos}(X) \to \Diamond \exists x X(x))\)}
 \UnaryInfC{\(\mathrm{Pos}(G) \to \Diamond \exists x G(x)\)}
 \RightLabel{MP}
 \BinaryInfC{\(\Diamond \exists x G(x)\)}
@@ -1111,6 +1114,93 @@ $$\neg(\neg \Diamond \psi \to \neg \Diamond \varphi) \to \neg \square (\varphi \
 \BinaryInfC{\(\square \exists x G(x)\)}
 \end{prooftree}
 
+\begin{prop}
+\(\neg \square (X \sqsubseteq \neg X) \equiv \Diamond \exists x X(x)\).
+\end{prop}
+\begin{proof}
+\begin{enumerate}
+\item \(\neg \square (X \sqsubseteq \neg X) \equiv\)
+\item \(\Diamond \neg (X \sqsubseteq \neg X) \equiv\)
+\item \(\Diamond \neg \forall x (X (x) \to \neg X (x)) \equiv\)
+\item \(\diamond \exists x \neg (X(x) \to \neg X(x)) \equiv \)
+\item \( \Diamond \exists x (X(x) \land \neg \neg X(x)) \equiv\)
+\item \(\Diamond \exists x X(x).\)
+\end{enumerate}
+\end{proof}
+\begin{prop}
+\(G(x) \to \forall Y (\mathrm{Pos}(Y) \equiv Y(x))\).
+\end{prop}
+\begin{prop}
+\(\mathrm{Pos}(Y) \vdash G \sqsubseteq Y\).
+\end{prop}
+\begin{proof}
+\begin{prooftree}
+\AxiomC{\(\mathrm{Pos} (Y)\)}
+\AxiomC{\(\forall H \forall x [(H(Y) \land \forall Z (H(Z) \to Z(x))) \to Y(x)]\)}
+\UnaryInfC{\(\forall x [(\mathrm{Pos}(Y) \to \forall Z (\mathrm{Pos}(Z) \to Z(x))) \to Y(x)]\)}
+\RightLabel{Import}
+\UnaryInfC{\(\forall x [(\mathrm{Pos}(Y) \to (\forall Z (\mathrm{Pos}(Z) \to Z(x)))) \to Y(x)]\)}
+\RightLabel{\(\forall \to\)}
+\UnaryInfC{\(\mathrm{Pos}(Y) \to \forall x (\forall Z (\mathrm{Pos}(Z) \to Z(x)) \to Y(x)))\)}
+\RightLabel{MP}
+\BinaryInfC{\(\forall x (\forall Z (\mathrm{Pos}(Z) \to Z(x)) \to Y(x))\)}
+\RightLabel{def}
+\UnaryInfC{\(\forall (G(x) \to Y(x))\)}
+\RightLabel{def}
+\UnaryInfC{\(G \sqsubseteq Y\)}
+\end{prooftree}
+\end{proof}
+
+\begin{prop}
+\(\mathrm{Pos}(X) \land \mathrm{Pos}(Y) \to \mathrm{Pos}(X \land Y),\) где \(X \land Y := \lambda x [X(x) \land Y(x)]\).
+\end{prop}
+
+\begin{lem}
+\(\forall X (\mathrm{Pos}(X) \to \Diamond \exists x X(x))\).
+\end{lem}
+
+\begin{lem}
+\(G(x) \to \square \exists x G(x)\).
+\end{lem}
+\begin{proof}
+Докажем сначало, что 
+\begin{prop}
+\(G(x) \vdash \square \exists x G(x)\).
+\end{prop}
+\begin{proof}
+\begin{prooftree}
+\AxiomC{\(G(x)\)}
+\AxiomC{\(G \to \mathrm{ess}(G, x)\)}
+\RightLabel{MP}
+\BinaryInfC{\(\mathrm{ess} (G, x)\)}
+\AxiomC{\(G(x)\)}
+\AxiomC{\(G(x) \to E(x)\)}
+\RightLabel{MP}
+\BinaryInfC{\(E(x)\)}
+\RightLabel{def}
+\UnaryInfC{\(\forall Y (\mathrm{ess} (Y, x) \to \square \exists x Y(x))\)}
+\RightLabel{\(\forall\)-elim}
+\UnaryInfC{\(\mathrm{ess} (G, x) \to \square \exists x G(x)\)}
+\RightLabel{MP}
+\BinaryInfC{\(\square \exists x G(x)\)}
+\end{prooftree}
+\end{proof}
+
+\begin{prop}
+\(G(x) \vdash E(x)\).
+\end{prop}
+
+\begin{prop}
+\(G(x) \to \mathrm{ess}(G, x)\).
+\end{prop}
+
+\end{proof}
+
+\subsection{Проблемы}
+
+В ряде работ (Sobel2006, Fitting2002) утверждается, что аксиомы Геделя приводят к модальному коллапсу: \(\square p \equiv p\). (Benzm\"{u}ller, Paleo, 2016) утверждают, что из аксиом Геделя выводится \(\Diamond \square \bottom\). Нужно оговорится, что они используют первоначальный вариант определения существенного свойства --- \(\mathrm{ess(X, x) := \forall Y (Y(x) \to \square (X \sqsubseteq Y))}\). Д. Скотт предложил поправку к этому определению --- добавить конъюнкт \(X(x)\). В большинстве реконструкций онтологического аргумента используется вариант Д. Скотта.
+
+Реконструкция онтологического аргумента Ансельма Кентерберийского находится в статье \cite{Ramharter}.
 
 \begin{thebibliography}{2}
 
@@ -1185,6 +1275,12 @@ Odifreddi P.
 \newblock {\em Ultrafilters, Dictators, and God.} 
 \newblock Finite Versus Infinite. Discrete Mathematics and Theoretical Computer Science. Springer, London, 2000.
 \newblock {url: \url{https://doi.org/10.1007/978-1-4471-0751-4_16}}
+
+\bibitem{Ramharter}
+Esther Ramharter and G\"{u}nther Eder.
+\newblock {\em Formal Reconstructions of St. Anselm's Ontological Argument}
+\newblock Springer Netherlands, Synthese, vol. 192, no. 9, 2015, 2795--2825.
+
 
 \end{thebibliography}
 \end{document}
