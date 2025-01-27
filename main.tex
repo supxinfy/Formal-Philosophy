@@ -1255,18 +1255,21 @@
 
 \subsection{Аксиомы}
 
-\(\mathrm{Pos}(X) =\) свойство \(X\) является позитивным,
-«Positive means positive in the moral aesthetic sense (independently of the accidental structure of the world). Only then are the axioms true. It may also mean pure "attribution' as opposed to 'privation' (or containing privation)». Цит. по. (Fitting 2002, р. 146 (Аксиологически)
+\(\mathrm{Pos}(X) =\) свойство \(X\) является позитивным, или как понимал это сам Гедель
+«Positive means positive in the moral aesthetic sense (independently of the accidental structure of the world). Only then are the axioms true. It may also mean pure "attribution' as opposed to 'privation' (or containing privation)». Цитата по \cite{Fitting} на странице 146. Это аксиологический способ интерпретации понятия позитивности, иными словами, мы говорим о моральном идеале или идеале добродетели. Это не единственный способ построить аргумент. Мы могли бы понимать позитивность в онтологическом смысле, как «присутствие».
 
+Обретя некоторое понимание позитивности, мы можем сформулировать аксиомы:
 \begin{enumerate}
-    \item \(\mathrm{Pos}(G)\)
-
-    \item \(\mathrm{Pos}(E)\)
-
-    \item \(\neg \mathrm{Pos}(S) \equiv \mathrm{Pos}(\neg S)\)
-    \item \(\mathrm{Pos}(S) \to \square \mathrm{Pos}(S)\)
-    \item \([\mathrm{Pos}(S) \land \square (S \sqsubseteq Q)] \to \mathrm{Pos}(Q)\)
+    \item \(\mathrm{Pos}(G)\) (Бог позитивен)
+    \item \(\mathrm{Pos}(E)\) (Существование позитивно)
+    \item \(\neg \mathrm{Pos}(S) \equiv \mathrm{Pos}(\neg S)\) (Если \(S\) не позитивно, то не \(S\) позитивно)
+    \item \(\mathrm{Pos}(S) \to \square \mathrm{Pos}(S)\) (Позитивное необходимо позитивно)
+    \item \([\mathrm{Pos}(S) \land \square (S \sqsubseteq Q)] \to \mathrm{Pos}(Q)\) (Позитивные качества влекут позитивные качества)
 \end{enumerate}
+
+Если принять аксиологическую интерпретацию качеств, различая их по моральному аспекту, то аксиома 3 окажется очень сильной. В самом деле, мы разделяем мир качеств на два непересекающиеся множества позитивных и негативных качеств, что, как кажется, не совсем так в жизни. Поэтому стоит иметь ввиду, что позитивность может пониматься разными способами.
+
+Ещё сделаем замечание относительно позитивности существования. Пусть мы и называем \(E(x)\) как «\(x\) существует», но в действительности мы говорим нечто более тонкое, чем просто \(\exists x\). Мы говорим, что всякое свойство, существенное для \(x\), экземплифицируется (реализуется) в каком-то объекте.
 
 Далее выпишем всю цепочку утверждений ведущим к доказательству существования Бога, которые возможно доказать из этих аксиом.
 
@@ -1274,11 +1277,12 @@
     \item \(\mathrm{Pos}(S) \to \Diamond \exists x S(x)\) (Если свойство позитивно, то, возможно, существует объект, обладающий этим свойством)
     \item \(\Diamond \exists x G(x)\) (Следовательно, Бог, возможно, существует. Что интересно, в ранних версиях онтологического аргумента это была аксиома)
     \item \(G(x) \to \forall S (\mathrm{Pos}(S) \equiv G(x))\)
-    \item \(G(x) \to \mathrm{ess}(G, x)\)
+    \item \(G(x) \to \mathrm{ess}(G, x)\) (Свойство «Божественности» существенно для Бога)
     \item \(G(x) \to \square \exists y G(y)\) 
-    \item \(\square \exists x G(x)\)
+    \item \(\square \exists x G(x)\) (Необходимо существует Бог)
 \end{itemize}
 
+Следующие упражнения не существенны для аргумента, но наводят на интересные мысли. Позитивность образует структуру, которую в математике именуют ультрафильтром. Эта структура полезна в нестандартном анализе, алгебре и подобных приложениях.
 \begin{prop}
     \(\mathrm{Pos}(X) \land \mathrm{Pos}(Y) \to \mathrm{Pos}(X \land Y),\) где \(X \land Y := \lambda x [X(x) \land Y(x)]\).
 \end{prop}
@@ -1302,7 +1306,8 @@
 
 \subsection{Доказательство}
 
-Общелогический инструментарий. Мы будем использовать следующие правила вывода:
+Теперь все проделаем шаги, которые мы обозначили ранее. Для начала зафиксируем наш инструментарий.
+Из общелогического инструментария мы будем использовать следующие правила вывода:
 \begin{enumerate}
     \item[(MP)] \begin{prooftree}
 	    \AxiomC{\(\varphi\)}
@@ -1319,14 +1324,13 @@
     \item внесение \(\forall\) в скобку
 \end{enumerate}
 
-Для доказательства нам понадобятся следующие леммы:
+Еще мы докажем следующие леммы:
 \begin{enumerate}
     \item \(\forall X (\mathrm{Pos(X) \to \Diamond \exists x X(x)})\)
     \item \(G(x) \to \square \exists x G(x)\)
 \end{enumerate}
 
-Сначала рассмотрим как доказательство собирается из лемм, а потом отдельно докажем сами леммы.
-
+Не считая доказательства самих этих лемм, мы уже можем доказать существование Бога следующим образом.
 
 \begin{prooftree}
     \AxiomC{\(\)}
@@ -1351,6 +1355,12 @@
     \BinaryInfC{\(\square \exists x G(x)\)}
 \end{prooftree}
 
+Из слабостей этого доказательства сильнее всех выделяется использование аксиомы S5. В самом деле, мы доказали, что существование Бога «возможно необходимо» \(\Diamond \square \exists x G(x)\). Можно аргументировать, что если что-то «возможно необходимо», то есть «в каком-то возможном мире необходимо», то тогда это «необходимо», однако конечный статус аксиомы S5 и ее валидности в этом контексте открыт. Мы можем отказаться от нее, но тогда доказывается только «возможная необходимость», чтобы это не значило.
+
+Другой интересный момент, стоящий внимания, есть доказательство возможности существования Бога. В классической формулировке онтологического аргумента Бога представляют как «мыслимую возможность» или, иными словами, существование Бога полагается возможным. Лейбниц отмечал, что это серьезный недостаток онтологического аргумента, так как он не доказывает возможность существование. У Геделя, как мы видим, возможность существование --- это теорема, а не аксиома. 
+
+Нам осталось только проделать утомительную работу по доказыванию двух лемм. Начнем с доказательства вспомогательного упражнения.
+
 \begin{prop}
     \(\neg \square (X \sqsubseteq \neg X) \equiv \Diamond \exists x X(x)\).
 \end{prop}
@@ -1359,19 +1369,24 @@
 	\item \(\neg \square (X \sqsubseteq \neg X) \equiv\)
 	\item \(\Diamond \neg (X \sqsubseteq \neg X) \equiv\)
 	\item \(\Diamond \neg \forall x (X (x) \to \neg X (x)) \equiv\)
-	\item \(\diamond \exists x \neg (X(x) \to \neg X(x)) \equiv \)
+	\item \(\Diamond \exists x \neg (X(x) \to \neg X(x)) \equiv \)
 	\item \( \Diamond \exists x (X(x) \land \neg \neg X(x)) \equiv\)
 	\item \(\Diamond \exists x X(x).\)
     \end{enumerate}
 \end{proof}
+
+Теперь перейдем к доказательству того утверждения, которое мы упоминали перед доказательством. А именно то, что Бог обладает любым позитивным качеством.
 
 \begin{prop}
     \(G(x) \to \forall Y (\mathrm{Pos}(Y) \equiv Y(x))\).
 \end{prop}
 \begin{proof}
     \begin{prooftree}
+    	\AxiomC{\(\forall A (A \to A \land A)\)}
+	\UnaryInfC{\(G(x) \to G(x) \land G(x)\)}
 	\AxiomC{\(G(x)\)}
-	\UnaryInfC{\(G(x) \land G(x)\)}
+	\RightLabel{MP}
+	\BinaryInfC{\(G(x) \land G(x)\)}
 	\UnaryInfC{\(\forall Y (\mathrm{Pos(Y) \to Y(x)}) \land \forall \neg Y (\mathrm{Pos( \neg Y) \to \neg Y(x)})\)}
 	\RightLabel{Аксиома 3}
 	\UnaryInfC{\(\forall Y (\mathrm{Pos(Y) \to Y(x)}) \land \forall \neg Y (\neg \mathrm{Pos(Y) \to \neg Y(x)})\)}
@@ -1381,6 +1396,7 @@
     \end{prooftree}
 \end{proof}
 
+Теперь мы хотим показать, что из позитивности \(Y\) следует, что Бог влечет позитивность \(Y\).
 
 \begin{prop}
     \(\mathrm{Pos}(Y) \vdash G \sqsubseteq Y\).
@@ -1403,7 +1419,7 @@
     \end{prooftree}
 \end{proof}
 
-
+И наконец мы можем доказать, что из позитивности следует возможность существования объекта с этим свойством (что мы потом используем для доказательства возможности существования Бога).
 
 \begin{lem}
     \(\forall X (\mathrm{Pos}(X) \to \Diamond \exists x X(x))\).
@@ -1422,7 +1438,7 @@
     \(G(x) \to \square \exists x G(x)\).
 \end{lem}
 \begin{proof}
-    Докажем с начало, что 
+    Доказательство этой леммы опирается на три вспомогательных утверждения. Покажем сначала, что 
     \begin{prop}
 	\(G(x) \vdash \square \exists x G(x)\).
     \end{prop}
@@ -1445,6 +1461,8 @@
 	\end{prooftree}
     \end{proof}
 
+    В свою очередь, это утверждение опирается на следующие два утверждения.
+
     \begin{prop}
 	\(G(x) \vdash E(x)\).
     \end{prop}
@@ -1460,6 +1478,26 @@
     \begin{prop}
 	\(G(x) \to \mathrm{ess}(G, x)\).
     \end{prop}
+    \begin{proof}
+    	\begin{prooftree}
+	\AxiomC{\(G(x)\)}
+	\AxiomC{\(\forall X (\mathrm{Pos}(X) \to \square \mathrm{Pos}(X))\)}
+	\UnaryInfC{\(\mathrm{Pos}(Y) \to \square \mathrm{Pos}(Y)\)}
+	\AxiomC{\(\mathrm{Pos}(Y) \to (G \sqsubseteq Y)\)}
+	\UnaryInfC{\(\square \mathrm{Pos}(Y) \to \square (G \sqsubseteq Y)\)}
+	\BinaryInfC{\(\mathrm{Pos}(Y) \to \square (G \sqsubseteq Y)\)}
+	\AxiomC{\(G(x)\)}
+	\AxiomC{\(G(x) \to \forall Z (\mathrm{Pos}(Z) \equiv Z(x))\)}
+	\BinaryInfC{\(\forall Z (\mathrm{Pos} (Z) \equiv Z(x))\)}
+	\UnaryInfC{\(\mathrm{Pos}(Y) \equiv Y(x)\)}
+	\BinaryInfC{\(Y(x) \to \square (G \sqsubseteq Y)\)}
+	\UnaryInfC{\(\forall Y (Y(x) \to \square (G \sqsubseteq Y))\)}
+	\RightLabel{\(\land\)-intro}
+	\BinaryInfC{\(G(x) \land \forall Y (Y(x) \to \square (G \sqsubseteq Y))\)}
+	\RightLabel{def}
+	\UnaryInfC{\(\mathrm{ess}(G, x)\)}
+	\end{prooftree}
+    \end{proof}
 
 \end{proof}
 
@@ -1557,6 +1595,11 @@
     Andrej Bauer.
     \newblock {\em Five stages of accepting constructive mathematics.}
     \newblock Bulletin of the American Mathematical Society, 54 (2017), 481--498. 
+    
+    \bibitem{Fitting}
+    Melvin Fitting.
+    \newblock {\em Types, Tableaus, and G\"{o}del's God.}
+    \newblock Dordrecht, Boston and London: Kluwer Academic Publishers.
 
 \end{thebibliography}
 \end{document}
