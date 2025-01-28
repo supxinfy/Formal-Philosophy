@@ -1555,7 +1555,7 @@
 Нам понадобится ещё одно простое предположение \(\exists x E! x\). Есть хотя бы один объект, существующий в реальности. Однако, мы не получим хорошую реконструкцию аргумента, поскольку мы сравниваем объекты, но Бог, нечто не сравнимое. Поэтому подобная реконструкция не будет отвечать духу Ансельма. Поэтому нам потребуется друга формализация.
 
 Введем следующие сокращения: \(\forall_{\mathcal{P}} F\) означает \(\forall F (\mathcal{P}(F) \to \varphi (F))\),
-\(\exists_{\mathcal{P}} F\) означает \(\exists F (\mathcal{P}(F) \land \varphi (F))\), где \(\mathcal{P}\) --- некоторый класс обычных свойств (пропозиций).
+\(\exists_{\mathcal{P}} F\) означает \(\exists F (\mathcal{P}(F) \land \varphi (F))\), где \(\mathcal{P}\) --- некоторый класс обычных свойств (пропозиций). В нашем случае \(\mathcal{P}\) будет классом позитивных качеств. Тогда Бог определяется очень просто, как \(Gx := \forall_{\mathcal{P}} F F x\).
 
 Тогда мы можем формализовать превосходство иным способом. \[x > y :\leftrightarrow \forall_{\mathcal{P}} F (Fy \to Fx) \land \exists_{\mathcal{P}} F (Fx \land \neg F y).\]
 
@@ -1571,12 +1571,74 @@
 Иными словами, любой набор свойств соответствует мыслимому объекту.
 
 Последнее, что нам пригодится, будет следующий предикат 
-\[\mathcal{F}_{E!} (F) :\leftrightarrow FG \lor (F = E!).\]
+\[\mathcal{F}_{E!} (F) :\leftrightarrow FG \lor (F = E!),\]
+где \(X = Y\) означает \(\forall x (X x \leftrightarrow Y x)\).
 
 Приступим к доказательству.
-
+\begin{thm}
+    Бог существует.
+\end{thm}
 \begin{proof}
     Предположим, что \(\neg E! G\). Благодаря реализации существует объект \(a\), такой что \(\forall_{\mathcal{P}} F  ((FG \lor F = E!) \leftrightarrow F a)\). Тогда \(\forall_{\mathcal{P}} F  ((FG \to F a) \land (F = E! \to F a))\) и \(\forall_{\mathcal{P}} F  (F a \to (FG \lor F = E!))\). Следовательно, поскольку \(E!\) позитивно мы получаем \(E!a\). Но, также верно, что \(\forall_{\mathcal{P}} F (F G \to F a)\). Но тогда \(a > G\), что противоречит определению \(G\).
+
+    Теперь разберём каждый шаг в отдельности.
+
+    Для начала докажем старое определение Бога.
+    \begin{lem}
+	\(\neg \exists y (y > x)\).
+    \end{lem}
+    \begin{proof}
+	Будем действовать от противного.
+	\begin{prooftree}
+	    \AxiomC{\(G\)}
+	    \AxiomC{\(\exists y (y > G)\)}
+	    \UnaryInfC{\(\exists y \forall_{\mathcal{P}} F (FG \to F y) \land \exists_{\mathcal{P}} F (F y \land \neg F G)\)}
+	    \BinaryInfC{\(\exists y \exists_{\mathcal{P}} F' (F'G \to F' y) \land (F' y \land \neg F'G)\)}
+	    \UnaryInfC{\(\exists y \exists_{\mathcal{P}} F' (\neg F'G \lor F' y \land F' y \land \neg F'G)\)}
+	    \UnaryInfC{\(\exists_{\mathcal{P}} F' \neg F' G\)}
+	    \UnaryInfC{\(\bot\)}
+	\end{prooftree}
+	Следовательно \(\neg \exists y (y > x)\).
+    \end{proof}
+    Далее используя реализацию и предикат \(\mathcal{F}_{E!}\) мы докажем существование реализации в действительности.
+    \begin{lem}
+	Существует объект \(a\), реализующий \(\mathcal{F}_{E!}\) такой что \(E! a\).
+    \end{lem}
+    \begin{proof}
+	Доказывается это утверждение с помощью простых технических шагов. 
+	\begin{prooftree}
+	    \AxiomC{\(\forall_{\mathcal{P}} \mathcal{F} \exists x \forall_{\mathcal{P}} F (\mathcal{F} (F) \leftrightarrow F x)\)}
+	    \RightLabel{реализация}
+	    \UnaryInfC{\(\forall_{\mathcal{P}} F  (\mathcal{F}_{E!} (F) \leftrightarrow F a)\)}
+	    \UnaryInfC{\(\forall_{\mathcal{P}} F  ((FG \to F a) \land (F = E! \to F a))\)}
+	    \RightLabel{подстановка \(F \leftarrow E!\)}
+	    \UnaryInfC{\(((E!G \to F a) \land (E! = E! \to E! a))\)}
+	    \UnaryInfC{\((E! = E! \to E! a))\)}
+	    \UnaryInfC{\(E! a\)}
+	\end{prooftree}
+    \end{proof}
+
+    Теперь докажем, что \(a\) превосходит \(G\) исходя из предположения \(\neg E! G\) и результата леммы \(E! a\).
+
+    \begin{prooftree}
+	\AxiomC{\(\neg E! G\)}
+	\AxiomC{\(E! a\)}
+	\BinaryInfC{\(E! a \land \neg E! G\)}
+	\AxiomC{\(\forall_{\mathcal{P}} F  (FG \to F a)\)}
+	\BinaryInfC{\(\forall_{\mathcal{P}} F  (FG \to F a) \land (E! a \land \neg E! G)\)}
+	\UnaryInfC{\(\forall_{\mathcal{P}} F  (FG \to F a) \land \exists_{\mathcal{P}}F (F a \land \neg F G)\)}
+	\UnaryInfC{\(a > G\)}
+    \end{prooftree}
+
+    Тогда мы завершаем доказательство следующим выводом
+    \begin{prooftree}
+	\AxiomC{\(a > G\)}
+	\UnaryInfC{\(\exists y (y > G)\)}
+	\AxiomC{\(\neg \exists y (y > G)\)}
+	\BinaryInfC{\(\bot\)}
+    \end{prooftree}
+    Следовательно, наше предположение было неверным, значит \(E! G\).
+
 \end{proof}
 
 Давайте проделаем такую же работу используя модальную логику. Тогда Бог определяется как 
